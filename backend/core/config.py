@@ -22,6 +22,8 @@ class Settings(BaseSettings):
     object_store: str = Field(default="local_fs", alias="OBJECT_STORE")
     sandbox: str = Field(default="local_process", alias="SANDBOX")
 
+    llm_model: str = Field(default="claude-sonnet-5-5", alias="LLM_MODEL")
+
     # Paths
     data_dir: Path = Field(default=_REPO_ROOT / "data", alias="DATA_DIR")
     prompts_dir: Path = Field(default=_BACKEND_ROOT / "prompts", alias="PROMPTS_DIR")
